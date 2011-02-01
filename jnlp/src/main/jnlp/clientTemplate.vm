@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<jnlp
+	    spec="1.0+"
+	    codebase="$$context/lib/"
+	    href="$outputFile">
+	  <information>
+	    <title>$project.Name</title>
+
+	    <vendor>$project.Organization.Name<vendor/>	
+	    <homepage>${project.url}<homepage/>
+	    <description kind="one-line">${project.description}</description>
+    <icon href="images/icons/Bio32.jpg"/>
+    <offline-allowed/>
+  	<shortcut online="false">
+    	<desktop/>
+    	<menu submenu="Biorhythm"/>
+	</shortcut>
+	<keywords>biorhythm,health</keywords>
+	  </information>
+	  <security>
+	  </security>
+	  <resources>
+		<property name="jnlp.packEnabled" value="true"/>
+	    <j2se version="1.5+"
+	     initial-heap-size="64m"
+	     max-heap-size="128m"
+	     />
+<!-- *** There seems to be a bug in the jnlp-download-servlet that prevents versioned pack.gz files from being retrieved ***
+	     $dependencies
+  -->
+    <jar href="jbundle-biorhythm-base-${project.version}.jar" part="bio" download="eager" main="true"/>
+    <package name="org.jbundle.biorhythm.*" part="bio" recursive="false"/>
+    <jar href="jbundle-biorhythm-i18n-${project.version}.jar" part="i18n" download="lazy" main="false"/>
+    <package name="org.jbundle.biorhythm.resources.*" part="i18n" recursive="true"/>
+    <jar href="jbundle-jcalendarbutton-${jbundle-jcalendarbutton-version}.jar" part="jbundle-jcalendarbutton" download="lazy" main="false"/>
+    <package name="net.sourceforge.jcalendarbutton.*" part="jbundle-jcalendarbutton" recursive="true"/>
+    <jar href="jbundle-util-muffinmanager-${project.version}.jar" part="muffinmanager" download="lazy" main="false"/>
+    <package name="org.jbundle.thin.base.util.muffinmanager.*" part="muffinmanager" recursive="true"/>
+	  </resources>
+	  <application-desc main-class="$mainClass">
+	  </application-desc>
+	</jnlp>
+	
