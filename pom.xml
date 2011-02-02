@@ -6,7 +6,7 @@
   <parent>
   	<artifactId>jbundle-parent</artifactId>
   	<groupId>org.jbundle.config</groupId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
     <relativePath>../../jbundle-parent</relativePath>
   </parent>
 
@@ -28,6 +28,7 @@ On a day where the cycle crosses the critical point your abilities can vary wild
   	<biorhythm.i18n.artifactId>org.jbundle.util.biorhythm.i18n</biorhythm.i18n.artifactId>
   	<biorhythm.mainClass>org.jbundle.util.biorhythm.Biorhythm</biorhythm.mainClass>
   	<biorhythm.base.package>org.jbundle.util.biorhythm</biorhythm.base.package>
+    <jbundleScmPath>util/biorhythm</jbundleScmPath>
   </properties>
   
   <modules>
@@ -37,13 +38,4 @@ On a day where the cycle crosses the critical point your abilities can vary wild
     <module>osgi</module>
   </modules>
 
-  <scm>
-    <!-- url>ssh://doncorley@jcalendarbutton.hg.sourceforge.net/hgroot/jcalendarbutton/jbundle-biorhythm</url>
-    <connection>scm:hg:http://jcalendarbutton.hg.sourceforge.net:8000/hgroot/jcalendarbutton/jbundle-biorhythm</connection>
-    <developerConnection>scm:hg:ssh://doncorley@jcalendarbutton.hg.sourceforge.net/hgroot/jcalendarbutton/jbundle-biorhythm</developerConnection -->
-    <url>http://scm.jbundle.org/gitweb/scm/git/workspace/jbundle/util/biorhythm</url>
-    <connection>scm:git:http://scm.jbundle.org/scm/git/workspace/jbundle/util/biorhythm</connection>
-    <developerConnection>scm:git:ssh://scm.jbundle.org/scm/git/workspace/jbundle/util/biorhythm</developerConnection>
-  </scm>
-      
 </project>
