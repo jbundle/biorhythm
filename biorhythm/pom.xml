@@ -41,9 +41,6 @@
     <dependency>
       <groupId>com.sun.java.jnlp</groupId>
       <artifactId>jnlp-servlet</artifactId>
-      <version>${webstart-jnlp-servletVersion}</version>
-?      <scope>system</scope>
-?      <systemPath>${java.home}/../sample/jnlp/servlet/jnlp-servlet.jar</systemPath>
     </dependency>
        -->
 
@@ -54,7 +51,6 @@
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
-        <version>${exec-maven-pluginVersion}</version>
         <executions>
           <execution>
           	<phase>run</phase>
@@ -71,7 +67,6 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
-        <version>${maven-jar-pluginVersion}</version>
         <configuration>
           <archive>
             <manifestFile>src/main/resources/META-INF/MANIFEST.MF</manifestFile>
