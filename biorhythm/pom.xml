@@ -14,10 +14,10 @@
   <name>biorhythm-base - Biorhythm base</name>
 
   <properties>
-    <jbundle.package.export>
+    <jbundlePackageExport>
       !org.jbundle.biorhythm.util.resources.*,
       org.jbundle.util.biorhythm.*;version=${project.version},
-    </jbundle.package.export>	<!-- Bundle package to export -->
+    </jbundlePackageExport>	<!-- Bundle package to export -->
   </properties>
 
   <dependencies>
