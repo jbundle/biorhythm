@@ -16,7 +16,7 @@ import java.util.StringTokenizer;
 import javax.swing.JApplet;
 import javax.swing.JFrame;
 
-import org.jbundle.thin.base.util.muffinmanager.MuffinManager;
+import org.jbundle.util.muffinmanager.MuffinManager;
 
 
 /** 

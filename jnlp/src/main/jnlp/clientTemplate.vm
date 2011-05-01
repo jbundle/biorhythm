@@ -35,7 +35,7 @@
     <jar href="jbundle-jcalendarbutton-${jbundle-jcalendarbuttonVersion}.jar" part="jbundle-jcalendarbutton" download="lazy" main="false"/>
     <package name="net.sourceforge.jcalendarbutton.*" part="jbundle-jcalendarbutton" recursive="true"/>
     <jar href="jbundle-util-muffinmanager-${jbundle-util-muffinmanagerVersion}.jar" part="muffinmanager" download="lazy" main="false"/>
-    <package name="org.jbundle.thin.base.util.muffinmanager.*" part="muffinmanager" recursive="true"/>
+    <package name="org.jbundle.util.muffinmanager.*" part="muffinmanager" recursive="true"/>
 	  </resources>
 	  <application-desc main-class="$mainClass">
 	  </application-desc>
