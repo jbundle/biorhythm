@@ -30,9 +30,9 @@ On a day where the cycle crosses the critical point your abilities can vary wild
     <package name="org.jbundle.biorhythm.*" part="bio" recursive="false"/>
     <jar href="lib/jbundle-biorhythm-i18n${project.version}.jar" part="biores" download="lazy" main="false"/>
     <package name="org.jbundle.biorhythm.resources.*" part="biores" recursive="true"/>
-    <jar href="lib/jbundle-jcalendarbutton-${jbundle-jcalendarbutton-version}.jar" part="jbundle-jcalendarbutton" download="lazy" main="false"/>
+    <jar href="lib/jbundle-jcalendarbutton-${jbundle-jcalendarbuttonVersion}.jar" part="jbundle-jcalendarbutton" download="lazy" main="false"/>
     <package name="org.sourceforge.jcalendarbutton.*" part="jbundle-jcalendarbutton" recursive="true"/>
-    <jar href="lib/jbundle-util-muffinmanager-${muffinmanager.version}.jar" part="muffinmanager" download="lazy" main="false"/>
+    <jar href="lib/jbundle-util-muffinmanager-${jbundle-util-muffinmanagerVersion}.jar" part="muffinmanager" download="lazy" main="false"/>
     <package name="com/tourapp/thin/base/screen.*" part="muffinmanager" recursive="true"/>
   </resources>
   <application-desc
