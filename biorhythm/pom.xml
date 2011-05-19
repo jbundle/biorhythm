@@ -11,7 +11,7 @@
 
   <artifactId>org.jbundle.util.biorhythm</artifactId>
   <packaging>bundle</packaging>
-  <name>biorhythm-base - Biorhythm base</name>
+  <name>jbundle-util-biorhythm - Biorhythm</name>
 
   <properties>
     <jbundlePackageExport>

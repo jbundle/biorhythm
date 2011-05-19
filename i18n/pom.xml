@@ -12,7 +12,7 @@
   <artifactId>org.jbundle.util.biorhythm.i18n</artifactId>
   <packaging>bundle</packaging>
 
-  <name>biorhythm-i18n - Biorhythm internationalization</name>
+  <name>jbundle-util-biorhythm-i18n - Biorhythm internationalization</name>
 
   <properties>
     <jbundle.package>org.jbundle.biorhythm.resources</jbundle.package>	<!-- Bundle package to export -->
