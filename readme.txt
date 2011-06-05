@@ -2,6 +2,7 @@ Biorhythm
 
 Author: Don Corley
 E-Mail: don@tourgeek.com
+Website: www.jbundle.org
 
 Biorhythm Theory states that our lives are influenced by a Physical,
 Emotional, and Intellectual cycle which begin at birth. 
