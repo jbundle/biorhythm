@@ -6,7 +6,7 @@
   <parent>
   	<artifactId>jbundle-parent</artifactId>
   	<groupId>org.jbundle.config</groupId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.1</version>
     <relativePath>../../jbundle-parent</relativePath>
   </parent>
 
@@ -29,6 +29,7 @@ On a day where the cycle crosses the critical point your abilities can vary wild
   	<biorhythm.mainClass>org.jbundle.util.biorhythm.Biorhythm</biorhythm.mainClass>
   	<biorhythm.base.package>org.jbundle.util.biorhythm</biorhythm.base.package>
     <jbundleScmPath>util/biorhythm</jbundleScmPath>
+    <jbundle.workspace>${user.home}/workspace/workspace</jbundle.workspace>
   </properties>
   
   <modules>
