@@ -28,7 +28,7 @@
     <dependency>
     	<groupId>org.jbundle.util</groupId>
     	<artifactId>org.jbundle.util.muffinmanager</artifactId>
-    	<version>0.7.7-SNAPSHOT</version>
+    	<version>${jbundle-util-muffinmanagerVersion}</version>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
