@@ -30,7 +30,7 @@ public class Biorhythm extends JApplet implements Constants
 {
     private static final long serialVersionUID = 1L;
     
-	protected String[] m_args = null;
+	zprotected String[] m_args = null;
 	
 	protected Controller m_controller = null;
 	
