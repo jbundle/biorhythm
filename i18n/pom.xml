@@ -15,7 +15,7 @@
   <name>jbundle-util-biorhythm-i18n - Biorhythm internationalization</name>
 
   <properties>
-    <jbundle.package>org.jbundle.biorhythm.resources</jbundle.package>	<!-- Bundle package to export -->
+    <jbundlePackage>org.jbundle.biorhythm.resources</jbundlePackage>	<!-- Bundle package to export -->
   </properties>
 
   <build>
