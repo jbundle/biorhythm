@@ -6,7 +6,7 @@
   <parent>
     <artifactId>jbundle-util-biorhythm-reactor</artifactId>
     <groupId>org.jbundle.util.biorhythm</groupId>
-    <version>0.7.8</version>
+    <version>0.7.9-SNAPSHOT</version>
   </parent>
 
   <artifactId>org.jbundle.util.biorhythm</artifactId>
@@ -28,7 +28,7 @@
     <dependency>
     	<groupId>org.jbundle.util</groupId>
     	<artifactId>org.jbundle.util.muffinmanager</artifactId>
-    	<version>0.8.0</version>
+    	<version>0.8.1-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
@@ -38,7 +38,7 @@
     <dependency>
     	<groupId>org.jbundle.util.jcalendarbutton</groupId>
     	<artifactId>org.jbundle.util.jcalendarbutton</artifactId>
-    	<version>1.5.4</version>
+    	<version>1.5.5-SNAPSHOT</version>
     </dependency>
 
       <!--
