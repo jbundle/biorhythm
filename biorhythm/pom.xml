@@ -28,7 +28,7 @@
     <dependency>
     	<groupId>org.jbundle.util</groupId>
     	<artifactId>org.jbundle.util.muffinmanager</artifactId>
-    	<version>0.8.1-SNAPSHOT</version>
+    	<version>${jbundle-util-muffinmanagerVersion}</version>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
@@ -38,7 +38,7 @@
     <dependency>
     	<groupId>org.jbundle.util.jcalendarbutton</groupId>
     	<artifactId>org.jbundle.util.jcalendarbutton</artifactId>
-    	<version>1.5.5-SNAPSHOT</version>
+    	<version>${jbundle-jcalendarbuttonVersion}</version>
     </dependency>
 
       <!--
