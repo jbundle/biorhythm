@@ -36,7 +36,7 @@
         <configuration>
           <instructions>
             <Bundle-ManifestVersion>2</Bundle-ManifestVersion>
-            <Bundle-SymbolicName>${project.groupId}.${project.artifactId}</Bundle-SymbolicName>
+            <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
             <Export-Package>${biorhythm.base.package}.resources.*;version=${project.version}</Export-Package>
             <Import-Package>
                 *;resolution:=optional,

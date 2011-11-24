@@ -37,7 +37,7 @@
         <configuration>
           <instructions>
             <Bundle-ManifestVersion>2</Bundle-ManifestVersion>
-            <Bundle-SymbolicName>${project.groupId}.${project.artifactId}</Bundle-SymbolicName>
+            <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
             <Bundle-Activator>${biorhythm.base.package}.osgi.Activator</Bundle-Activator>
             <!-- ?? Private-Package>${biorhythm.base.package}.osgi</Private-Package -->
             <Export-Package>${biorhythm.base.package}.osgi.*;version=${project.version}</Export-Package>
