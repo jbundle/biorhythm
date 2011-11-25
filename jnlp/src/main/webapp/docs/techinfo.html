@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="StarOffice/5.2 (Linux)">
+	<META NAME="AUTHOR" CONTENT="Don Corley">
+	<META NAME="CREATED" CONTENT="20010114;193584">
+	<META NAME="CHANGEDBY" CONTENT="Don Corley">
+	<META NAME="CHANGED" CONTENT="20010309;1362400">
+</HEAD>
+<BODY>
+<H2>Biorhythm - Technical Notes</H2>
+<P>Biorhythm is a Java2 Application. The key design goals for
+Biorhythm were:</P>
+<UL>
+	<LI><P>Deployment flexibility. Biorhythm can be deployed as an
+	Applet, a Standalone Application, a Java Web Start Application, or a
+	JavaBean all using the same jar file.</P>
+	<LI><P>Design Simplicity. Although Biorhythm has gotten rather
+	large, it is based on the industry-standard MVC
+	(model-view-controller) architecture with simple base classes.</P>
+</UL>
+<P>The question I am asked most is, &quot;How do I calculate a
+Biorhythm for a particular date and graph it.&quot; Well, just follow
+these steps:</P>
+<OL>
+	<LI><P>First figure out how many days the date is into the current
+	cycle.<BR>Remainder of: Days from birthday / days in cycle</P>
+	<LI><P>Next figure out the strength of the signal (It starts at zero
+	an follows a sine wave to +1, 0, -1, and back to 0)<BR>Convert the
+	remainder to radians and take the sine.</P>
+	<LI><P>Plot it! (Okay this is an over simplification, but basically
+	that's it!)</P>
+</OL>
+<P>Biorhythm is freeware. You can look at the source, copy it, use
+it. You just can't remove the copyright notice or sell it.</P>
+<P>Here is the zip of this distribution (including the source code):
+<A HREF="../src/biorhythm.zip">biorhythm.zip</A> (you may have to right-click and
+select download file) If you want to put biorhythm on another
+web-server just unzip this and place the files in your directory
+(tomcat compatible servers work best).</P>
+<P>All of the source code is also here on-line. To browse my source
+directory, <A HREF="../src/">click here</A>.</P>
+<P>Many thanks to the people who have sent in the translations for
+biorhythm.</P>
+</BODY>
+</HTML>
