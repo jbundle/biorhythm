@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+  	<artifactId>jbundle-parent</artifactId>
+  	<groupId>org.jbundle.config</groupId>
+    <version>1.1.2-SNAPSHOT</version>
+    <relativePath>../../jbundle-parent</relativePath>
+  </parent>
+
+  <groupId>org.jbundle.util.biorhythm</groupId>
+  <artifactId>jbundle-util-biorhythm-reactor</artifactId>
+  <version>0.8.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  
+  <name>Biorhythm - Parent Project</name>
+  <description>Biorhythm Theory states that our lives are influenced by a Physical,
+Emotional, and Intellectual cycle which begin at birth. 
+At birth, all three states start at the critical point and begin to rise 
+to a positive peak, then cycle to a low point. 
+On a day where the cycle crosses the critical point your abilities can vary wildly.</description>
+  <url>http://www.jbundle.org/bio</url>
+
+  <scm>
+    <url>https://github.com/jbundle/biorhythm</url>
+    <connection>scm:git:git://github.com/jbundle/biorhythm.git</connection>
+    <developerConnection>scm:git:git@github.com:jbundle/biorhythm.git</developerConnection>
+  </scm>
+
+  <properties>
+  	<biorhythm.base.artifactId>org.jbundle.util.biorhythm</biorhythm.base.artifactId>
+  	<biorhythm.i18n.artifactId>org.jbundle.util.biorhythm.i18n</biorhythm.i18n.artifactId>
+  	<biorhythm.mainClass>org.jbundle.util.biorhythm.Biorhythm</biorhythm.mainClass>
+  	<biorhythm.base.package>org.jbundle.util.biorhythm</biorhythm.base.package>
+    <jbundleScmPath>util/biorhythm</jbundleScmPath>
+  </properties>
+  
+  <modules>
+    <module>biorhythm</module>
+    <module>i18n</module>
+    <module>jnlp</module>
+    <module>osgi</module>
+    <!-- module>p2</module --> <!-- Module works fine, I just don't want this to cache helios -->
+  </modules>
+
+</project>

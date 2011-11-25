@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- JNLP File for Biorhythm Demo Application -->
+<jnlp spec="1.0+" codebase="$$context" href="docs/applet.jnlp">
+  <information>
+    <title>Biorhythm Application</title>
+    <vendor>tourapp.com</vendor>
+    <homepage href="index.html"/>
+    <description kind="one-line">Biorhythm Application</description>
+    <description kind="short">
+		${project.description}
+    </description>
+    <icon href="images/icons/Bio32.jpg"/>
+    <offline-allowed/>
+    <shortcut online="false">
+      <desktop/>
+      <menu submenu="Biorhythm"/>
+    </shortcut>
+    <update check="timeout" />
+	<keywords>${project.scm.tag}</keywords>
+  </information>
+  <security>
+  </security>
+  <resources>
+    <java version="1.5+" initial-heap-size="64m" max-heap-size="128m"/>
+<property name="jnlp.packEnabled" value="true"/>
+    <jar href="lib/jbundle-biorhythm-base-${project.version}.jar" part="bio" download="eager" main="true"/>
+    <package name="org.jbundle.biorhythm.*" part="bio" recursive="false"/>
+    <jar href="lib/jbundle-biorhythm-i18n-${project.version}.jar" part="biores" download="lazy" main="false"/>
+    <package name="org.jbundle.biorhythm.resources.*" part="biores" recursive="true"/>
+    <jar href="lib/jbundle-jcalendarbutton-${jbundle-jcalendarbuttonVersion}.jar" part="jbundle-jcalendarbutton" download="lazy" main="false"/>
+    <package name="${jcalendarbutton.package}.*" part="jbundle-jcalendarbutton" recursive="true"/>
+    <jar href="lib/jbundle-util-muffinmanager-${jbundle-util-muffinmanagerVersion}.jar" part="muffin" download="lazy" main="false"/>
+    <package name="${muffinmanager.package}.*" part="muffin" recursive="true"/>
+  </resources>
+  <applet-desc name="${project.name}" main-class="${biorhythm.mainClass}" width="300" height="250">
+  </applet-desc>
+</jnlp>
+

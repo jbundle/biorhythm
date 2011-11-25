@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Export-Package: org.jbundle.util.biorhythm.resources;version="0.8.1.SN
+ APSHOT"
+OBRRepositoryIndexURL: http://www.jbundle.org/NONE
+Built-By: don
+Tool: Bnd-1.43.0
+Bundle-Name: jbundle-util-biorhythm-i18n - Biorhythm internationalizat
+ ion
+Created-By: Apache Maven Bundle Plugin
+Bundle-Vendor: jbundle.org
+Build-Jdk: 1.6.0_29
+Bundle-Version: 0.8.1.SNAPSHOT
+Bnd-LastModified: 1322155837303
+Bundle-ManifestVersion: 2
+Bundle-Description: Biorhythm Theory states that our lives are influen
+ ced by a Physical,Emotional, and Intellectual cycle which begin at bi
+ rth. At birth, all three states start at the critical point and begin
+  to rise to a positive peak, then cycle to a low point. On a day wher
+ e the cycle crosses the critical point your abilities can vary wildly
+ .
+Bundle-License: http://www.gnu.org/licenses/gpl.txt
+OBRRepositoryIndex: NONE
+Bundle-DocURL: http://www.jbundle.org
+Bundle-SymbolicName: org.jbundle.util.biorhythm.i18n
+

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<jnlp-versions>
+  <resource>
+    <pattern>
+      <name>org.jbundle.util.biorhythm.jar</name>
+      <version-id>0.8.1-SNAPSHOT</version-id>
+    </pattern>
+    <file>org.jbundle.util.biorhythm-0.8.1-SNAPSHOT.jar</file>
+  </resource>
+  <resource>
+    <pattern>
+      <name>org.jbundle.util.muffinmanager.jar</name>
+      <version-id>2.0.0</version-id>
+    </pattern>
+    <file>org.jbundle.util.muffinmanager-2.0.0.jar</file>
+  </resource>
+  <resource>
+    <pattern>
+      <name>org.jbundle.util.biorhythm.i18n.jar</name>
+      <version-id>0.8.1-SNAPSHOT</version-id>
+    </pattern>
+    <file>org.jbundle.util.biorhythm.i18n-0.8.1-SNAPSHOT.jar</file>
+  </resource>
+  <resource>
+    <pattern>
+      <name>org.jbundle.util.jcalendarbutton.jar</name>
+      <version-id>1.5.4</version-id>
+    </pattern>
+    <file>org.jbundle.util.jcalendarbutton-1.5.4.jar</file>
+  </resource>
+</jnlp-versions>
