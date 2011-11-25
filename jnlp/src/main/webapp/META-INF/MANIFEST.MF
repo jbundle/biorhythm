@@ -1,6 +1,0 @@
-Manifest-Version: 1.0
-Class-Path: jbundle-biorhythm-base-${project.version}.jar
- jbundle-biorhythm-i18n-${project.version}.jar
- jbundle-util-muffinmanager-${jbundle-util-muffinmanagerVersion}.jar
- jbundle-jcalendarbutton-{jbundle-jcalendarbuttonVersion}.jar
-Main-Class: ${biorhythm.mainClass}

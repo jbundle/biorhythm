@@ -1,6 +1,0 @@
-Manifest-Version: 1.0
-Class-Path: jbundle-biorhythm-base-0.8.1-SNAPSHOT.jar
- jbundle-biorhythm-i18n-0.8.1-SNAPSHOT.jar
- jbundle-util-muffinmanager-2.0.0.jar
- jbundle-jcalendarbutton-{jbundle-jcalendarbuttonVersion}.jar
-Main-Class: org.jbundle.util.biorhythm.Biorhythm
