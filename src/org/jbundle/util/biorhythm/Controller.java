@@ -78,7 +78,7 @@ public class Controller extends android.view.View
 	public void setStartDate(Date dateStart)
 	{
 		m_dateStart = dateStart;
-//+		this.getModel().getView().repaint();	// Update view
+		this.getModel().getView().invalidate();	// Update view
 	}
 	/**
 	 * Get the start date.
@@ -95,7 +95,7 @@ public class Controller extends android.view.View
 	public void setEndDate(Date dateEnd)
 	{
 		m_dateEnd = dateEnd;
-//+		this.getModel().getView().repaint();	// Update view
+		this.getModel().getView().invalidate();	// Update view
 	}
 	/**
 	 * Get the end date.
@@ -114,7 +114,8 @@ public class Controller extends android.view.View
 		if (dateBirth == null)
 			dateBirth = new Date();		// Default to today
 		m_dateBirth = dateBirth;
-//+		this.getModel().getView().repaint();	// Update view
+		
+		this.getModel().getView().invalidate();	// Update view
 	}
 	/**
 	 * Get the birthdate.

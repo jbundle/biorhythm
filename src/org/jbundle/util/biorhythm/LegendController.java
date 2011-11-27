@@ -8,6 +8,9 @@ import java.beans.PropertyChangeSupport;
 import java.text.DateFormat;
 import java.util.Date;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.net.wifi.p2p.WifiP2pManager.ActionListener;
 
 /**
@@ -27,16 +30,16 @@ public class LegendController extends Controller
 	/**
 	 * Creates new Controller.
 	 */
-	public LegendController(Model model, Date dateBirth, Date dateStart, Date dateEnd)
+	public LegendController(Context context, Model model, Date dateBirth, Date dateStart, Date dateEnd)
 	{
-	    super(null, model, dateEnd, dateEnd, dateEnd);
+	    super(context, model, dateEnd, dateEnd, dateEnd);
 //?		this();
 		this.init(model, dateBirth, dateStart, dateEnd);
 	}
 	/**
 	 * Creates new Controller.
 	 */
-	public void init(Model model, Date dateBirth, Date dateStart, Date dateEnd)
+	public void init(Context context, Model model, Date dateBirth, Date dateStart, Date dateEnd)
 	{
 		super.init(model, dateBirth, dateStart, dateEnd);
 		this.addComponents();
@@ -171,5 +174,30 @@ public class LegendController extends Controller
     public void onSuccess() {
         // TODO Auto-generated method stub
         
+    }
+    SharedPreferences preferences = null;
+    public void setPreferences(SharedPreferences preferences)
+    {
+        Date defDate = new Date();
+        long birthdate = preferences.getLong("birthdate", defDate.getTime());
+
+        this.setBirthdate(new Date(birthdate));
+
+        this.preferences = preferences;
+    }
+    /**
+     * Set the birthdate.
+     * @param dateBirth The birthdate to analyze.
+     */
+    public void setBirthdate(Date dateBirth)
+    {
+        super.setBirthdate(dateBirth);
+        
+        if (preferences != null)
+        {
+            Editor editor = preferences.edit();
+            editor.putLong("birthdate", dateBirth.getTime());
+            editor.commit();
+        }
     }
 }

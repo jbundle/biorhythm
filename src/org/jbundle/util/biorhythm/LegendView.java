@@ -16,7 +16,6 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.util.AttributeSet;
-import android.widget.Button;
 
 /** 
  * LegendView - This is the biorhythm view.
@@ -71,6 +70,10 @@ public class LegendView extends View
         String strBundleName = this.getResourceName();
 		m_resources = ResourceBundle.getBundle(strBundleName, currentLocale);
 	}
+    Controller createController(Context context, Model model, Date dateBirth, Date dateStart, Date dateEnd)
+    {
+        return new LegendController(context, model, dateBirth, dateStart, dateEnd);
+    }
 	/**
 	 * Paint this portion of the panel (overidden from awt).
 	 * @param g Graphics object to paint to.

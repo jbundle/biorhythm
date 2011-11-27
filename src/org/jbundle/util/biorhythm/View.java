@@ -54,7 +54,6 @@ public class View extends android.view.View
         
         calendar.set(1960, 9, 17);
 
-        
         Date today = new Date();
         Date dateBirth = calendar.getTime();
         
@@ -63,8 +62,13 @@ public class View extends android.view.View
         Date dateStart = calendar.getTime();
         calendar.set(Calendar.DATE, 30);
         Date dateEnd = calendar.getTime();
-        Controller controller = new Controller(context, model, dateBirth, dateStart, dateEnd);
+        Controller controller = this.createController(context, model, dateBirth, dateStart, dateEnd);
         return controller;
+    }
+    
+    Controller createController(Context context, Model model, Date dateBirth, Date dateStart, Date dateEnd)
+    {
+        return new Controller(context, model, dateBirth, dateStart, dateEnd);
     }
     
     /**

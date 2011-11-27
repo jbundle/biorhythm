@@ -1,10 +1,12 @@
 package org.jbundle.util.biorhythm;
 
 import java.util.Calendar;
+import java.util.Date;
 
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -19,12 +21,16 @@ public class BiorhythmActivity extends Activity {
         // capture our View elements
         mDateDisplay = (TextView) findViewById(R.id.dateDisplay);
         mPickDate = (Button) findViewById(R.id.pickDate);
-        mPickDate = (Button) findViewById(R.id.pickDate);
         View view = (View) findViewById(R.id.view1);
-        String birthdate = view.getResource().getString("Birthdate");
-        if (birthdate != null)
-            mPickDate.setText(birthdate);
-
+        String birthdateText = view.getResource().getString("Birthdate");
+        if (birthdateText != null)
+            mPickDate.setText(birthdateText);
+        
+        controller = view.getController();
+        
+        SharedPreferences preferences = this.getPreferences(MODE_PRIVATE);
+        ((LegendController)controller).setPreferences(preferences);
+        
         // add a click listener to the button
         mPickDate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,7 +40,9 @@ public class BiorhythmActivity extends Activity {
         });
 
         // get the current date
-        final Calendar c = Calendar.getInstance();
+        Date birthdate = controller.getBirthdate();
+        Calendar c = Calendar.getInstance();
+        c.setTime(birthdate);
         mYear = c.get(Calendar.YEAR);
         mMonth = c.get(Calendar.MONTH);
         mDay = c.get(Calendar.DAY_OF_MONTH);
@@ -62,6 +70,18 @@ public class BiorhythmActivity extends Activity {
                     mYear = year;
                     mMonth = monthOfYear;
                     mDay = dayOfMonth;
+                    
+                    Calendar c = Calendar.getInstance();
+                    c.set(Calendar.YEAR, year);
+                    c.set(Calendar.MONTH, monthOfYear);
+                    c.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+                    c.set(Calendar.HOUR_OF_DAY, 12);
+                    c.set(Calendar.MINUTE, 0);
+                    c.set(Calendar.SECOND, 0);
+                    c.set(Calendar.MILLISECOND, 0);
+                    Date dateBirth = c.getTime();
+                    controller.setBirthdate(dateBirth);
+                    
                     updateDisplay();
                 }
             };
@@ -76,14 +96,14 @@ public class BiorhythmActivity extends Activity {
                 }
                 return null;
             }
-
-      private TextView mDateDisplay;
+            
+    private Controller controller = null;
+    private TextView mDateDisplay;
+    
     private Button mPickDate;
     private int mYear;
     private int mMonth;
     private int mDay;
 
     static final int DATE_DIALOG_ID = 0;
-    
-
 }
