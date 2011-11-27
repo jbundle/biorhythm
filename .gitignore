@@ -10,5 +10,5 @@ skeleton_test_data*
 .metadata
 *.releaseBackup
 release.properties
-.class
+bin
 
