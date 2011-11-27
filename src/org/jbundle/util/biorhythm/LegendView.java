@@ -16,6 +16,7 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.util.AttributeSet;
+import android.widget.Button;
 
 /** 
  * LegendView - This is the biorhythm view.
@@ -66,9 +67,9 @@ public class LegendView extends View
 
 		//this.setPreferredSize(new Dimension(300, 300));
 
-//		Locale currentLocale = Locale.getDefault();
-  //      String strBundleName = this.getResourceName();
-	//	m_resources = ResourceBundle.getBundle(strBundleName, currentLocale);
+		Locale currentLocale = Locale.getDefault();
+        String strBundleName = this.getResourceName();
+		m_resources = ResourceBundle.getBundle(strBundleName, currentLocale);
 	}
 	/**
 	 * Paint this portion of the panel (overidden from awt).
@@ -90,17 +91,19 @@ public class LegendView extends View
 	    int width = this.getWidth();
 	    int height = this.getHeight();
 		int colorBack = this.getElementColor(BACKGROUND);
-        Paint paint = new Paint();
+        Paint paint = getPaint();
 		//if (colorBack != null)
 		{
 		    paint.setColor(colorBack);
 			canvas.drawRect(0, 0, width, height, paint);
 		}
 		paint.setColor(this.getElementColor(GRID));
-		for (int i = height / 2; i >= 0; i = i - 10) {
+		paint.setStrokeWidth(2);
+		int textSize = (int)paint.getTextSize();
+		for (int i = height / 2; i >= 0; i = i - textSize * 2) {
 			canvas.drawLine(0, i, width, i, paint);
 		}
-		for (int i = height / 2; i <= height; i = i + 10) {
+		for (int i = height / 2; i <= height; i = i + textSize * 2) {
 			canvas.drawLine(0, i, width, i, paint);
 		}
 		paint.setColor(this.getElementColor(BASELINE));
@@ -126,7 +129,10 @@ public class LegendView extends View
 		int xNow = -1;
         int width = this.getWidth();
         int height = this.getHeight();
-        Paint paint = new Paint();
+        Paint paint = getPaint();
+        int textSize = Integer.parseInt(this.getResources().getString(R.string.font_size));
+        paint.setTextSize(textSize);
+        paint.setStrokeWidth(2);
 		for (int x = -1; x < width; x++)
 		{
 			iNextDay = iDay;	// Last day
@@ -144,9 +150,9 @@ public class LegendView extends View
 				{	// Put the day in the middle of the box
 					paint.setColor(colorDate);
 					String strDate = Integer.toString(iDay);
-					int istringWidth = 10; //? canvas.getFontMetrics().stringWidth(strDate);
+			        int istringWidth = this.getTextWidth(paint, strDate);
 					int sx = x + (iDayOffsetX - istringWidth) / 2;
-					int sy = 12;
+					int sy = textSize;
 					canvas.drawText(strDate, sx, sy, paint);
 					iStartDayX = x;
 				}
@@ -165,24 +171,26 @@ public class LegendView extends View
 //		FontMetrics fm = canvas.getFontMetrics();
         int width = this.getWidth();
         int height = this.getHeight();
-		Paint paint = new Paint();
+		Paint paint = getPaint();
+        int textSize = Integer.parseInt(this.getResources().getString(R.string.font_size));
+        paint.setTextSize(textSize);
 		paint.setColor(this.getElementColor(PHYSICAL_CYCLE));
 		int sx = 10;
 		int sy = height - 7;
 		canvas.drawLine(sx, sy, sx+20, sy, paint);
-		String string = "Physical Cycle";//?this.getResources().getString("Physical Cycle");
+        String string = this.getResource().getString("Physical Cycle");
 		canvas.drawText(string, sx+25, sy+5, paint); 
 
 		paint.setColor(this.getElementColor(EMOTIONAL_CYCLE));
-		string = "Emotional Cycle";//?this.getResources().getString("Emotional Cycle");
-		int iWidth = 10; //?fm.stringWidth(string);
+		string = this.getResource().getString("Emotional Cycle");
+        int iWidth = this.getTextWidth(paint, string);
 		sx = (width - iWidth - 20) / 2;
 		canvas.drawLine(sx, sy, sx+20, sy, paint);
 		canvas.drawText(string, sx+25, sy+5, paint); 
 
 		paint.setColor(this.getElementColor(INTELLECTUAL_CYCLE));
-		string = "Intellectual Cycle";//?this.getResources().getString("Intellectual Cycle");
-		iWidth = 10; //?fm.stringWidth(string);
+		string = this.getResource().getString("Intellectual Cycle");
+        iWidth = this.getTextWidth(paint, string);
 		sx = width - 30 - iWidth;
 		canvas.drawLine(sx, sy, sx+20, sy, paint);
 		canvas.drawText(string, sx+25, sy+5, paint); 
@@ -242,16 +250,17 @@ public class LegendView extends View
 	public void drawThisTickmark(Canvas canvas, int x, int iCycleLength, int iTrend, Paint paint)
 	{
 		int sy = convertXtoY(x, iCycleLength);
-		canvas.drawLine(x, sy - 4, x, sy + 4, paint);
+		int tickHeight = (int)paint.getTextSize() / 3;
+		canvas.drawLine(x, sy - tickHeight, x, sy + tickHeight, paint);
 		if (iTrend == -1)
-			sy -= 5;
+			sy += paint.getTextSize();
 		else
-			sy += 14;
+			sy -= paint.getTextSize() / 2;
 		Date dateAtMark = new Date(this.convertXtoTime(x));
 		gCalendar.setTime(dateAtMark);
 		int iDay = gCalendar.get(Calendar.DAY_OF_MONTH);
 		String strDate = Integer.toString(iDay);
-		int istringWidth = 10; //canvas.getFontMetrics().stringWidth(strDate);
+		int istringWidth = this.getTextWidth(paint, strDate);
 		int sx = x - istringWidth / 2;
 		canvas.drawText(strDate, sx, sy, paint);
 	}
@@ -268,10 +277,10 @@ public class LegendView extends View
 	 * Get the resource bundle.
 	 * @return Local string resources.
 	 */
-//?	public ResourceBundle getResources()
-//?	{
-//?		return m_resources;
-//?	}
+	public ResourceBundle getResource()
+	{
+		return m_resources;
+	}
 	/**
 	 * Sets the language property (java.lang.String) value.
 	 * @param language The new value for the property.

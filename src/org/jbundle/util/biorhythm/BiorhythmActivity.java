@@ -19,6 +19,11 @@ public class BiorhythmActivity extends Activity {
         // capture our View elements
         mDateDisplay = (TextView) findViewById(R.id.dateDisplay);
         mPickDate = (Button) findViewById(R.id.pickDate);
+        mPickDate = (Button) findViewById(R.id.pickDate);
+        View view = (View) findViewById(R.id.view1);
+        String birthdate = view.getResource().getString("Birthdate");
+        if (birthdate != null)
+            mPickDate.setText(birthdate);
 
         // add a click listener to the button
         mPickDate.setOnClickListener(new View.OnClickListener() {

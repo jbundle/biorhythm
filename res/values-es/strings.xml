@@ -3,8 +3,5 @@
 
     <string name="hello">Biorhythm!</string>
     <string name="app_name">Biorhythm</string>
-    <string name="birthdate">Birthdate</string>
-    <color name="background_color">#ffffcccc</color>
-    <string name="font_size">24</string>
-
+    
 </resources>

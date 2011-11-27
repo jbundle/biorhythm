@@ -20,11 +20,6 @@ import android.util.AttributeSet;
 public class Controller extends android.view.View
 	implements Constants
 {
-    /**
-     * 
-     */
-    private static final long serialVersionUID = 1L;
-    
 	protected Model m_model = null;
 
 	protected Date m_dateStart = null;		// Start date in long form

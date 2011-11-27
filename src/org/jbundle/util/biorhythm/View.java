@@ -3,6 +3,7 @@ package org.jbundle.util.biorhythm;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.ResourceBundle;
 import java.util.SimpleTimeZone;
 import java.util.TimeZone;
 
@@ -131,7 +132,9 @@ public class View extends android.view.View
         int iWidth = this.getWidth();
         for (int x = 0 ; x < iWidth ; x++)
         {
-            Paint paint = new Paint();
+            
+            Paint paint = this.getPaint();
+            paint.setStrokeWidth(7);
             paint.setColor(this.getElementColor(PHYSICAL_CYCLE));
             this.drawGraphLine(canvas, x, PHYSICAL_CYCLE, paint);
             paint.setColor(this.getElementColor(EMOTIONAL_CYCLE));
@@ -148,7 +151,10 @@ public class View extends android.view.View
      */
     public void drawGraphLine(Canvas canvas, int x, int iCycleLength, Paint paint)
     {
-        canvas.drawLine(x, this.convertXtoY(x, iCycleLength), x + 1, this.convertXtoY(x + 1, iCycleLength), paint);
+        if (paint.getStrokeWidth() <= 1)
+            canvas.drawLine(x, this.convertXtoY(x, iCycleLength), x + 1, this.convertXtoY(x + 1, iCycleLength), paint);
+        else
+            canvas.drawLine(x, this.convertXtoY(x, iCycleLength), x + 2, this.convertXtoY(x + 1, iCycleLength), paint);
     }
     /**
      * Convert this x value to a y value.
@@ -216,7 +222,7 @@ public class View extends android.view.View
         if (iCycleLength == INTELLECTUAL_CYCLE)
             return Color.GREEN;
         if (iCycleLength == BACKGROUND)
-            return Color.MAGENTA;
+            return 0xFFFFCCCC; //Color.PINK
         if (iCycleLength == GRID)
             return Color.GRAY;
         if (iCycleLength == BASELINE)
@@ -228,12 +234,43 @@ public class View extends android.view.View
         return Color.BLACK;
     }
     /**
+     * 
+     * @return
+     */
+    public Paint getPaint()
+    {
+        if (paint == null)
+        {
+            paint = new Paint();
+            int textSize = Integer.parseInt(this.getResources().getString(R.string.font_size));
+            paint.setTextSize(textSize);
+            paint.setStrokeWidth(10);
+        }
+        return paint;
+    }
+    protected Paint paint = null;
+    /**
+     * 
+     * @param paint
+     * @param text
+     * @return
+     */
+    public int getTextWidth(Paint paint, String text)
+    {
+        float widths[] = new float[text.length()];
+        paint.getTextWidths(text, widths);
+        int totalWidth = 0;
+        for (float width : widths)
+            totalWidth += width;
+        return totalWidth;
+    }
+    /**
      * Get the resource bundle.
      * Note: Override this to supply the resource bundle.
      * @return Local string resources.
      */
-//    public ResourceBundle getResources()
-//    {
-//        return null;
-//    }
+    public ResourceBundle getResource()
+    {
+        return null;
+    }
 }

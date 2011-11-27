@@ -4,11 +4,6 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/hello" />
-
     <TextView android:id="@+id/dateDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,7 +11,7 @@
     <Button android:id="@+id/pickDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Change the date"/>
+        android:text="@string/birthdate"/>
     
     <org.jbundle.util.biorhythm.LegendView
         android:id="@+id/view1"
