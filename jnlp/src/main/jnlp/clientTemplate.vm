@@ -32,9 +32,9 @@
     <package name="org.jbundle.biorhythm.*" part="bio" recursive="false"/>
     <jar href="jbundle-biorhythm-i18n-${project.version}.jar" part="i18n" download="lazy" main="false"/>
     <package name="org.jbundle.biorhythm.resources.*" part="i18n" recursive="true"/>
-    <jar href="jbundle-jcalendarbutton-${jbundle-jcalendarbuttonVersion}.jar" part="jbundle-jcalendarbutton" download="lazy" main="false"/>
+    <jar href="jbundle-jcalendarbutton-${jbundleJcalendarbuttonVersion}.jar" part="jbundle-jcalendarbutton" download="lazy" main="false"/>
     <package name="net.sourceforge.jcalendarbutton.*" part="jbundle-jcalendarbutton" recursive="true"/>
-    <jar href="jbundle-util-muffinmanager-${jbundle-util-muffinmanagerVersion}.jar" part="muffinmanager" download="lazy" main="false"/>
+    <jar href="jbundle-util-muffinmanager-${jbundleUtilMuffinmanagerVersion}.jar" part="muffinmanager" download="lazy" main="false"/>
     <package name="org.jbundle.util.muffinmanager.*" part="muffinmanager" recursive="true"/>
 	  </resources>
 	  <application-desc main-class="$mainClass">

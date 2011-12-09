@@ -27,9 +27,9 @@
     <package name="org.jbundle.biorhythm.*" part="bio" recursive="false"/>
     <jar href="lib/jbundle-biorhythm-i18n-${project.version}.jar" part="biores" download="lazy" main="false"/>
     <package name="org.jbundle.biorhythm.resources.*" part="biores" recursive="true"/>
-    <jar href="lib/jbundle-jcalendarbutton-${jbundle-jcalendarbuttonVersion}.jar" part="jbundle-jcalendarbutton" download="lazy" main="false"/>
+    <jar href="lib/jbundle-jcalendarbutton-${jbundleJcalendarbuttonVersion}.jar" part="jbundle-jcalendarbutton" download="lazy" main="false"/>
     <package name="${jcalendarbutton.package}.*" part="jbundle-jcalendarbutton" recursive="true"/>
-    <jar href="lib/jbundle-util-muffinmanager-${jbundle-util-muffinmanagerVersion}.jar" part="muffin" download="lazy" main="false"/>
+    <jar href="lib/jbundle-util-muffinmanager-${jbundleUtilMuffinmanagerVersion}.jar" part="muffin" download="lazy" main="false"/>
     <package name="${muffinmanager.package}.*" part="muffin" recursive="true"/>
   </resources>
   <applet-desc name="${project.name}" main-class="${biorhythm.mainClass}" width="300" height="250">
