@@ -3,7 +3,7 @@
  *
  * Created on January 14, 2001, 12:39 AM
  
- * Copyright © 2011 jbundle.org. All rights reserved.
+ * Copyright © 2012 jbundle.org. All rights reserved.
  */
 package org.jbundle.util.biorhythm;
 

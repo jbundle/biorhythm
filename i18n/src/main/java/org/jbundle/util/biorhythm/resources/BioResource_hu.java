@@ -1,10 +1,10 @@
 /*
- * Copyright © 2011 jbundle.org. All rights reserved.
+ * Copyright © 2012 jbundle.org. All rights reserved.
  */
 package org.jbundle.util.biorhythm.resources;
 
 /**
- * Copyright (c) 1996 jbundle.org. All Rights Reserved.
+ * Copyright © 2012 jbundle.org. All Rights Reserved.
  *	Copy freely, but don't sell this program or remove this copyright notice.
  *		Don_Corley@msn.com
  */
