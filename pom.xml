@@ -6,13 +6,13 @@
   <parent>
   	<artifactId>jbundle-parent</artifactId>
   	<groupId>org.jbundle.config</groupId>
-    <version>1.1.5-SNAPSHOT</version>
+    <version>1.1.5</version>
     <relativePath>../../jbundle-parent</relativePath>
   </parent>
 
   <groupId>org.jbundle.util.biorhythm</groupId>
   <artifactId>jbundle-util-biorhythm-reactor</artifactId>
-  <version>0.8.1-SNAPSHOT</version>
+  <version>0.8.1</version>
   <packaging>pom</packaging>
   
   <name>Biorhythm - Parent Project</name>
