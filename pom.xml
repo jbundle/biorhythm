@@ -34,7 +34,7 @@ On a day where the cycle crosses the critical point your abilities can vary wild
   	<biorhythm.i18n.artifactId>org.jbundle.util.biorhythm.i18n</biorhythm.i18n.artifactId>
   	<biorhythm.mainClass>org.jbundle.util.biorhythm.Biorhythm</biorhythm.mainClass>
   	<biorhythm.base.package>org.jbundle.util.biorhythm</biorhythm.base.package>
-    <jbundleScmPath>util/biorhythm</jbundleScmPath>
+    <projectName>jbundle-util-biorhythm</projectName>
   </properties>
   
   <modules>
