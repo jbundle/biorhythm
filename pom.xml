@@ -45,4 +45,18 @@ On a day where the cycle crosses the critical point your abilities can vary wild
     <!-- module>p2</module --> <!-- Module works fine, I just don't want this to cache helios -->
   </modules>
 
+  <repositories>
+    <repository>
+      <id>sonatype-nexus-snapshots</id>
+      <name>Sonatype Nexus Snapshots</name>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+
 </project>
