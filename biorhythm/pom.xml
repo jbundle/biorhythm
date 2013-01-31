@@ -14,14 +14,14 @@
   <name>jbundle-util-biorhythm - Biorhythm</name>
 
   <properties>
-    <jbundlePackageExport>
+    <jbundle-package-export>
       !org.jbundle.util.biorhythm.resources.*,
       org.jbundle.util.biorhythm.*;version=${project.version},
-    </jbundlePackageExport>	<!-- Bundle package to export -->
-    <jbundlePackageImport>
+    </jbundle-package-export>	<!-- Bundle package to export -->
+    <jbundle-package-import>
     *;resolution:=optional,
     org.jbundle.util.biorhythm.resources;resolution:=optional;version=${project.version},
-    </jbundlePackageImport>
+    </jbundle-package-import>
   </properties>
 
   <dependencies>

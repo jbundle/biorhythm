@@ -2,7 +2,7 @@
 <feature
       id="feature"
       label="Biorhythm"
-      version="${biorhythmOsgiVersion}">
+      version="${biorhythm-osgi-version}">
 
    <description url="http://www.jbundle.org/bio">
       ${project.description}
@@ -20,7 +20,7 @@
          id="org.jbundle.util.biorhythm.org.jbundle.util.biorhythm.osgi"
          download-size="0"
          install-size="0"
-         version="${biorhythmOsgiVersion}"
+         version="${biorhythm-osgi-version}"
          unpack="false"/>
 
 </feature>
