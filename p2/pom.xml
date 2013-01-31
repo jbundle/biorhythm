@@ -99,7 +99,7 @@
 		<dependency>
 			<groupId>org.jbundle.util.biorhythm</groupId>
 			<artifactId>org.jbundle.util.biorhythm.osgi</artifactId>
-			<version>0.7.7-SNAPSHOT</version>
+			<version>${jbundle-util-biorhythm-version}</version>
 		</dependency>
 	</dependencies>
 
