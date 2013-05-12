@@ -23,14 +23,14 @@
   <resources>
     <java version="1.5+" initial-heap-size="64m" max-heap-size="128m"/>
 <property name="jnlp.packEnabled" value="true"/>
-    <jar href="lib/jbundle-biorhythm-base-${project.version}.jar" part="bio" download="eager" main="true"/>
-    <package name="org.jbundle.biorhythm.*" part="bio" recursive="false"/>
-    <jar href="lib/jbundle-biorhythm-i18n-${project.version}.jar" part="biores" download="lazy" main="false"/>
-    <package name="org.jbundle.biorhythm.resources.*" part="biores" recursive="true"/>
-    <jar href="lib/jbundle-jcalendarbutton-${jbundleJcalendarbuttonVersion}.jar" part="jbundle-jcalendarbutton" download="lazy" main="false"/>
-    <package name="${jcalendarbutton.package}.*" part="jbundle-jcalendarbutton" recursive="true"/>
-    <jar href="lib/jbundle-util-muffinmanager-${jbundleUtilMuffinmanagerVersion}.jar" part="muffin" download="lazy" main="false"/>
-    <package name="${muffinmanager.package}.*" part="muffin" recursive="true"/>
+    <jar href="lib/org.jbundle.util.biorhythm-${project.version}.jar" part="bio" download="eager" main="true"/>
+    <package name="org.jbundle.util.biorhythm.*" part="bio" recursive="false"/>
+    <jar href="lib/org.jbundle.util.biorhythm.i18n-${project.version}.jar" part="i18n" download="lazy" main="false"/>
+    <package name="org.jbundle.util.biorhythm.resources.*" part="i18n" recursive="true"/>
+    <jar href="lib/org.jbundle.util.jcalendarbutton-${jbundle-jcalendarbutton-version}.jar" part="jbundle-jcalendarbutton" download="lazy" main="false"/>
+    <package name="org.jbundle.util.jcalendarbutton.*" part="jbundle-jcalendarbutton" recursive="true"/>
+    <jar href="lib/org.jbundle.util.muffinmanager-${jbundle-util-muffinmanager-version}.jar" part="muffinmanager" download="lazy" main="false"/>
+    <package name="org.jbundle.util.muffinmanager.*" part="muffinmanager" recursive="true"/>
   </resources>
   <applet-desc name="${project.name}" main-class="${biorhythm.mainClass}" width="300" height="250">
   </applet-desc>
