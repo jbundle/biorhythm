@@ -22,7 +22,7 @@ import org.jbundle.util.muffinmanager.MuffinManager;
 
 /** 
  * Biorhythm - This is main the biorhythm program.
- * Copyright © 2012 tourapp.com. All Rights Reserved.
+ * Copyright © 2012 tourgeek.com. All Rights Reserved.
  * Copy freely, but don't sell this program or remove this copyright notice.
  * @author  Don Corley
  * @version 1.0

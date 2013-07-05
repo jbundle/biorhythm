@@ -3,7 +3,7 @@
 <jnlp spec="1.0+" codebase="$$context" href="docs/bio.jnlp">
   <information>
     <title>Biorhythm Application</title>
-    <vendor>tourapp.com</vendor>
+    <vendor>tourgeek.com</vendor>
     <homepage href="index.html"/>
     <description kind="one-line">Biorhythm Application</description>
     <description kind="short">
@@ -33,7 +33,7 @@ On a day where the cycle crosses the critical point your abilities can vary wild
     <jar href="lib/jbundle-jcalendarbutton-${jbundle-jcalendarbuttonVersion}.jar" part="jbundle-jcalendarbutton" download="lazy" main="false"/>
     <package name="org.sourceforge.jcalendarbutton.*" part="jbundle-jcalendarbutton" recursive="true"/>
     <jar href="lib/jbundle-util-muffinmanager-${jbundle-util-muffinmanagerVersion}.jar" part="muffinmanager" download="lazy" main="false"/>
-    <package name="com/tourapp/thin/base/screen.*" part="muffinmanager" recursive="true"/>
+    <package name="com/tourgeek/thin/base/screen.*" part="muffinmanager" recursive="true"/>
   </resources>
   <application-desc
 	main-class="${biorhythm.mainClass}">

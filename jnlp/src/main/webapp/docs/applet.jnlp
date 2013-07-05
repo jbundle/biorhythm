@@ -3,7 +3,7 @@
 <jnlp spec="1.0+" codebase="$$context" href="docs/applet.jnlp">
   <information>
     <title>Biorhythm Application</title>
-    <vendor>tourapp.com</vendor>
+    <vendor>tourgeek.com</vendor>
     <homepage href="index.html"/>
     <description kind="one-line">Biorhythm Application</description>
     <description kind="short">
