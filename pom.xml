@@ -12,7 +12,7 @@
 
   <groupId>org.jbundle.util.biorhythm</groupId>
   <artifactId>jbundle-util-biorhythm-reactor</artifactId>
-  <version>0.8.5-SNAPSHOT</version>
+  <version>0.8.4-SNAPSHOT</version>
   <packaging>pom</packaging>
   
   <name>Biorhythm - Parent Project</name>
