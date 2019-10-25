@@ -17,6 +17,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 import java.util.ResourceBundle;
+import java.util.MissingResourceException;
 
 /** 
  * LegendView - This is the biorhythm view.
@@ -65,7 +66,15 @@ public class LegendView extends View
 
 		Locale currentLocale = Locale.getDefault();
         String strBundleName = this.getResourceName();
-		m_resources = ResourceBundle.getBundle(strBundleName, currentLocale);
+        try {
+			m_resources = ResourceBundle.getBundle(strBundleName, currentLocale);
+		} catch (MissingResourceException ex) {
+			try {
+				m_resources = ResourceBundle.getBundle(strBundleName, (currentLocale != null) ? new Locale(currentLocale.getLanguage()) : null);
+			} catch (MissingResourceException ex2) {
+				m_resources = ResourceBundle.getBundle(strBundleName);
+			}
+		}
 	}
 	/**
 	 * Paint this portion of the panel (overidden from awt).
