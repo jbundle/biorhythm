@@ -115,8 +115,8 @@
   
   <dependencies>
     <dependency>
-        <groupId>org.jbundle.util.osgi.wrapped</groupId>
-        <artifactId>org.jbundle.util.osgi.wrapped.jnlp.sample</artifactId>
+      <groupId>org.codehaus.mojo</groupId>
+      <artifactId>webstart-jnlp-servlet</artifactId>
     </dependency>
   </dependencies>
 
