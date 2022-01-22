@@ -41,7 +41,7 @@ On a day where the cycle crosses the critical point your abilities can vary wild
   <modules>
     <module>biorhythm</module>
     <module>i18n</module>
-    <module>jnlp</module>
+    <!--module>jnlp</module-->
     <module>osgi</module>
     <!-- module>p2</module --> <!-- Module works fine, I just don't want this to cache helios -->
   </modules>
