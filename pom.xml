@@ -12,7 +12,7 @@
 
   <groupId>org.jbundle.util.biorhythm</groupId>
   <artifactId>jbundle-util-biorhythm-reactor</artifactId>
-  <version>0.8.8-SNAPSHOT</version>
+  <version>0.8.8</version>
   <packaging>pom</packaging>
   
   <name>Biorhythm - Parent Project</name>
@@ -27,7 +27,7 @@ On a day where the cycle crosses the critical point your abilities can vary wild
     <url>https://github.com/jbundle/biorhythm</url>
     <connection>scm:git:https://github.com/jbundle/biorhythm</connection>
     <developerConnection>scm:git:https://github.com/jbundle/biorhythm</developerConnection>
-    <tag>HEAD</tag>
+    <tag>jbundle-util-biorhythm-reactor-0.8.8</tag>
   </scm>
 
   <properties>
