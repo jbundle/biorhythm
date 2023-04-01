@@ -6,7 +6,7 @@
   <parent>
     <artifactId>jbundle-util-biorhythm-reactor</artifactId>
     <groupId>org.jbundle.util.biorhythm</groupId>
-    <version>0.8.8</version>
+    <version>0.8.9-SNAPSHOT</version>
   </parent>
 
   <artifactId>org.jbundle.util.biorhythm.i18n</artifactId>
